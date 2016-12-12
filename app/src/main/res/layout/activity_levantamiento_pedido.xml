@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_levantamiento_pedido"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.andreagaray.pedidos_is2.LevantamientoPedido">
+
+    <TextView
+        android:text="Cliente :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/txtCliente"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCliente2"
+        android:layout_alignBaseline="@+id/txtCliente"
+        android:layout_alignBottom="@+id/txtCliente"
+        android:layout_toRightOf="@+id/txtCliente"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp" />
+
+    <TextView
+        android:text="Nro. de Pedido:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nroPed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_alignBaseline="@+id/txtCliente2"
+        android:layout_alignBottom="@+id/txtCliente2"
+        android:layout_toLeftOf="@+id/nroPedido" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nroPedido"
+        android:layout_alignBaseline="@+id/nroPed"
+        android:layout_alignBottom="@+id/nroPed"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spProd"
+        android:layout_below="@+id/txtProd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"/>
+
+    <TextView
+        android:text="Cantidad :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCantidad"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/spProd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/spCant"
+        android:layout_toLeftOf="@+id/spCant" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spCant"
+        android:dropDownWidth="match_parent"
+        android:layout_alignBottom="@+id/txtCantidad"
+        android:layout_alignRight="@+id/txtCliente2"
+        android:layout_alignEnd="@+id/txtCliente2"
+        android:layout_alignLeft="@+id/txtCliente2"
+        android:layout_alignStart="@+id/txtCliente2"
+        />
+
+    <TextView
+        android:text="Producto:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/txtCliente2"
+        android:layout_toRightOf="@+id/txtCliente2"
+        android:layout_toEndOf="@+id/txtCliente2" />
+
+    <Button
+        android:text="Agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAgregar"
+        android:minHeight="30dp"
+        android:minWidth="78dip"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_below="@+id/spProd"
+        android:layout_toRightOf="@+id/txtProd"
+        android:layout_toEndOf="@+id/txtProd" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablaDetalle"
+        android:id="@+id/txtotal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/nroPed"
+        android:layout_alignLeft="@+id/btnAgregar"
+        android:layout_alignStart="@+id/btnAgregar"/>
+
+    <TextView
+        android:text="TOTAL : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_alignBaseline="@+id/txtotal"
+        android:layout_alignBottom="@+id/txtotal"
+        android:layout_toLeftOf="@+id/txtotal"
+        android:layout_toStartOf="@+id/txtotal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tablaDetalle"
+        android:layout_below="@+id/txtCantidad"
+        android:layout_toRightOf="@+id/scrollView2"
+        android:layout_toEndOf="@+id/scrollView2"
+        android:layout_height="270dp">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Prec.Unit.     "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cabPrecUn"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <TextView
+                android:text="Cantidad     "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cabCant"
+                android:layout_alignTop="@+id/spCant"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="@style/TextAppearance.AppCompat"/>
+
+            <TextView
+                android:text="Producto                   "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cabProd"
+                android:textAppearance="@style/TextAppearance.AppCompat"/>
+
+            <TextView
+                android:text="Sub Total          "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cabSubTot"
+                android:textAppearance="@style/TextAppearance.AppCompat"/>
+
+            <TextView
+                android:text="Accion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cabAccion"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:text="Registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegistrar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
